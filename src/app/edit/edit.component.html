@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagarro Travel PORTAL</title>
+</head>
+<body>
+    <h2>EDIT</h2>
+    <div class="container">
+        <fieldset>
+        <legend>Edit the fields you want</legend>
+        <h4>{{message}}</h4>
+    <form>
+        <div class="form-group">
+            <label for ="ticketId">Ticket ID</label>
+            <input type="text" class="form-control" id="ticketId" name="ticketId" value="{{ ticket.ticketId }}"
+             [(ngModel)] = "ticket.ticketId" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="requestType">Request Type</label>
+            <input type="text" class="form-control" id="requestType" name="requestType" value="{{ ticket.requestType }}"
+             [(ngModel)] = "ticket.requestType">
+        </div>
+        <div class="form-group">
+            <label for ="priority">Priority</label>
+            <input type="text" class="form-control" id="priority" name="priority" value="{{ ticket.priority }}"
+             [(ngModel)] = "ticket.priority">
+        </div>
+        <div class="form-group">
+            <label for ="locationTo">Location To</label>
+            <input type="text" class="form-control" id="locationTo" name="locationTo" value="{{ ticket.locationTo }}"
+             [(ngModel)] = "ticket.locationTo">
+        </div>
+        <div class="form-group">
+            <label for ="locationFrom">Location From</label>
+            <input type="text" class="form-control" id="locationFrom" name="locationFrom" value="{{ ticket.locationFrom }}"
+             [(ngModel)] = "ticket.locationFrom">
+        </div>
+        <div class="form-group">
+            <label for ="startDate">Start Date</label>
+            <input type="text" class="form-control" id="startDate" name="startDate" value="{{ ticket.startDate }}"
+             [(ngModel)] = "ticket.startDate">
+        </div>
+        <div class="form-group">
+            <label for ="endDate">End date</label>
+            <input type="text" class="form-control" id="endDate" name="endDate" value="{{ ticket.endDate }}"
+             [(ngModel)] = "ticket.endDate">
+        </div>
+        <div class="form-group">
+            <label for ="passportNo">Passport No</label>
+            <input type="text" class="form-control" id="passportNo" name="passportNo" value="{{ ticket.passportNo }}"
+             [(ngModel)] = "ticket.passportNo">
+        </div>
+        <div class="form-group">
+            <label for ="projectName">Project Name</label>
+            <input type="text" class="form-control" id="projectName" name="projectName" value="{{ ticket.projectName }}"
+             [(ngModel)] = "ticket.projectName">
+        </div>
+        <div class="form-group">
+            <label for ="expenseBearer">Expense Bearer</label>
+            <input type="text" class="form-control" id="expenseBearer" name="expenseBearer" value="{{ ticket.expenseBearer }}"
+             [(ngModel)] = "ticket.expenseBearer">
+        </div>
+        <div class="form-group">
+            <label for ="travelApprover">Travel Approver</label>
+            <input type="text" class="form-control" id="travelApprover" name="travelApprover" value="{{ ticket.travelApprover }}"
+             [(ngModel)] = "ticket.travelApprover">
+        </div>
+        <div class="form-group">
+            <label for ="expectedTravelDuration">Expected Duration</label>
+            <input type="text" class="form-control" id="expectedTravelDuration" name="expectedTravelDuration" value="{{ ticket.expectedTravelDuration }}"
+             [(ngModel)] = "ticket.expectedTravelDuration">
+        </div>
+        <div class="form-group">
+            <label for ="maxAllowedAmount">Max Allowed Amount</label>
+            <input type="text" class="form-control" id="maxAllowedAmount" name="maxAllowedAmount" value="{{ ticket.maxAllowedAmount }}"
+             [(ngModel)] = "ticket.maxAllowedAmount">
+        </div>
+        <div class="form-group">
+            <label for ="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" value="{{ ticket.description }}"
+             [(ngModel)] = "ticket.description">
+        </div>
+        <div class="form-group">
+            <label for ="ticketStatus">Ticket Status</label>
+            <input type="text" class="form-control" id="ticketStatus" name="ticketStatus" value="{{ ticket.ticketStatus }}"
+             [(ngModel)] = "ticket.ticketStatus" readonly>
+        </div>
+        <input type="submit" value="SUBMIT" name="home-edit" class="btn" (click)="updateTicket()" >
+        <input type="submit" value="GO TO HOME PAGE" name="home-page" class="btn" (click)="gotoHome()" >
+        </form>
+        
+    </fieldset>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ticket details</h2>
+    <h4 style="color: red;">Note: You can only change ticket status.All other fields are readonly.</h4>
+    
+    <div class="container">
+    <form>
+        <div class="form-group">
+            <label for ="ticketId">Ticket ID</label>
+            <input type="text" class="form-control" id="ticketId" name="ticketId" value="{{ ticket.ticketId }}"
+             [(ngModel)] = "ticket.ticketId" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="requestType">Request Type</label>
+            <input type="text" class="form-control" id="requestType" name="requestType" value="{{ ticket.requestType }}"
+             [(ngModel)] = "ticket.requestType" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="priority">Priority</label>
+            <input type="text" class="form-control" id="priority" name="priority" value="{{ ticket.priority }}"
+             [(ngModel)] = "ticket.priority" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="locationTo">Location To</label>
+            <input type="text" class="form-control" id="locationTo" name="locationTo" value="{{ ticket.locationTo }}"
+             [(ngModel)] = "ticket.locationTo" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="locationFrom">Location From</label>
+            <input type="text" class="form-control" id="locationFrom" name="locationFrom" value="{{ ticket.locationFrom }}"
+             [(ngModel)] = "ticket.locationFrom" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="startDate">Start Date</label>
+            <input type="text" class="form-control" id="startDate" name="startDate" value="{{ ticket.startDate }}"
+             [(ngModel)] = "ticket.startDate" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="endDate">End date</label>
+            <input type="text" class="form-control" id="endDate" name="endDate" value="{{ ticket.endDate }}"
+             [(ngModel)] = "ticket.endDate" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="passportNo">Passport No</label>
+            <input type="text" class="form-control" id="passportNo" name="passportNo" value="{{ ticket.passportNo }}"
+             [(ngModel)] = "ticket.passportNo" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="projectName">Project Name</label>
+            <input type="text" class="form-control" id="projectName" name="projectName" value="{{ ticket.projectName }}"
+             [(ngModel)] = "ticket.projectName" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="expenseBearer">Expense Bearer</label>
+            <input type="text" class="form-control" id="expenseBearer" name="expenseBearer" value="{{ ticket.expenseBearer }}"
+             [(ngModel)] = "ticket.expenseBearer" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="travelApprover">Travel Approver</label>
+            <input type="text" class="form-control" id="travelApprover" name="travelApprover" value="{{ ticket.travelApprover }}"
+             [(ngModel)] = "ticket.travelApprover" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="expectedTravelDuration">Expected Duration</label>
+            <input type="text" class="form-control" id="expectedTravelDuration" name="expectedTravelDuration" value="{{ ticket.expectedTravelDuration }}"
+             [(ngModel)] = "ticket.expectedTravelDuration" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="maxAllowedAmount">Max Allowed Amount</label>
+            <input type="text" class="form-control" id="maxAllowedAmount" name="maxAllowedAmount" value="{{ ticket.maxAllowedAmount }}"
+             [(ngModel)] = "ticket.maxAllowedAmount" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" value="{{ ticket.description }}"
+             [(ngModel)] = "ticket.description" readonly>
+        </div>
+        <div class="form-group">
+            <label for ="ticketStatus">Ticket Status</label>
+            <select class="form-control"class="form-control" id="ticketStatus" name="ticketStatus" value="{{ ticket.ticketStatus }}"
+            [(ngModel)] = "ticket.ticketStatus">
+                <option disabled>Select</option>
+                <option>submitted</option>
+                <option>re-submitted</option>
+                <option>in process</option>
+              </select>
+        </div>
+        <input type="submit" value="SUBMIT" name="home-status" class="btn" (click)="updateStatus()" ><br><br>
+        <a href="admin/tickets" style="color: white;background-color: #ff0066;padding: 20px;" >Go to home page</a>
+        </form>
+    </div>
+</body>
+</html>

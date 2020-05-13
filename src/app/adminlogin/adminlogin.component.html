@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagarro Travel Portal</title>
+</head>
+<body>
+    <h2>LOGIN</h2>
+    <div class="container">
+        <h3>Admin Login form</h3>
+    <form>
+        <div class="form-group">
+            <input required type="text" class="form-control" id="username" name="username" placeholder="Enter Username.."
+            maxlength="100" [(ngModel)] = "admin.username">
+        </div>
+        <div class="form-group">
+            <input required type="text" class="form-control" id="password" name="password" placeholder="Enter password.."
+            maxlength="100"  [(ngModel)] = "admin.password">
+        </div>
+        <input type="submit" value="LOGIN >>" name="login" class="btn" (click)="loginAdmin()">
+        <input type="submit" value="USER LOGIN" name="login-adminw" class="btn" (click)="gotoUserlogin()">
+    </form>
+    </div>
+</body>
+</html>
+

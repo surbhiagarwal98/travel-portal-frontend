@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+h2{
+    color: #ff0066;
+}
+.form-control{
+    width:30%;
+    clear: left;
+    border:none;
+    background-color: lightgray;
+    padding:7px;
+    margin:5px;
+}
+
+.form-group{
+    font-weight: bolder;
+}
+
+label{
+    margin: 20px;
+}
+.response-msg{
+    color: orange;
+}
+
+.btn{
+    border : none;
+    background-color: #ff0066;
+    color:whitesmoke;
+    padding:10px;
+    cursor: pointer;
+    width: 50%;
+    margin:5px;
+    font-weight: bolder;
+}
+
+fieldset{
+    border: 2px solid #ff0066;
+}
+
+#exp{
+    margin: 0 auto;
+    width:50%;
+    background-color: white;
+}
+
+#radiobuttons{
+    background-color: bisque;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagarro Travel Portal</title>
+</head>
+<body>
+    
+    <h2>REGISTRATION</h2>
+    <fieldset>
+        <legend><b>Registration form</b></legend>
+    <form>
+        <div class="form-group">
+            <label for ="firstName">First Name</label>
+            <input required type="text" class="form-control" id="firstName" name="firstName"
+            maxlength="28" [(ngModel)] = "user.firstName">
+        </div>
+        <div class="form-group">
+            <label for ="lastName">Last Name</label>
+            <input required type="text" class="form-control" id="lastName" name="lastName"
+            maxlength="35"  [(ngModel)] = "user.lastName">
+        </div>
+        <div class="form-group">
+            <label for ="businessUnit">Business Unit</label>
+            <input required type="text" class="form-control" id="businessUnit" name="businessUnit"
+            maxlength="20" [(ngModel)] = "user.businessUnit">
+        </div>
+        <div class="form-group">
+            <label for ="title">Title</label>
+            <input required type="text" class="form-control" id="title" name="title"
+            maxlength="20" [(ngModel)] = "user.title">
+        </div>
+        <div class="form-group">
+            <label for ="email">Email</label>
+            <input required type="text" class="form-control" id="email" name="email"
+            maxlength="100" [(ngModel)] = "user.email">
+        </div>
+        <div class="form-group">
+            <label for ="telephone">Telephone</label>
+            <input required type="text" class="form-control" id="telephone" name="telephone"
+            maxlength="15" [(ngModel)] = "user.telephone">
+        </div>
+        <div class="form-group">
+            <label for ="address1">Address1</label>
+            <input required type="text" class="form-control" id="address1" name="address1"
+            maxlength="100" [(ngModel)] = "user.address1">
+        </div>
+        <div class="form-group">
+            <label for ="address2">Address2</label>
+            <input type="text" class="form-control" id="address2" name="address2"
+            maxlength="100" [(ngModel)] = "user.address2">
+        </div>
+        <div class="form-group">
+            <label for ="city">City</label>
+            <input type="text" class="form-control" id="city" name="city"
+            maxlength="50" [(ngModel)] = "user.city">
+        </div>
+        <div class="form-group">
+            <label for ="state">State</label>
+            <input type="text" class="form-control" id="state" name="state"
+            maxlength="50" [(ngModel)] = "user.state">
+        </div>
+        <div class="form-group">
+            <label for ="zip">Zip</label>
+            <input type="text" class="form-control" id="zip" name="zip"
+            maxlength="15" [(ngModel)] = "user.zip">
+        </div>
+        <div class="form-group">
+            <label for ="country">Country</label>
+            <input type="text" class="form-control" id="country" name="country"
+            maxlength="15" [(ngModel)] = "user.country">
+        </div>
+        <h3>All fields are required.</h3>
+        <input type="submit" value="SUBMIT" name="submit-reg-form" class="btn" (click)="registerUser()">
+        <br>
+        <input type="submit" value="LOGIN >>" name="reg-login" class="btn" (click)="gotoLogin()">
+    </form>
+    <div class = "response-msg">
+        <h3>{{message}}</h3>
+    </div>
+</fieldset>
+    
+
+</body>
+</html>

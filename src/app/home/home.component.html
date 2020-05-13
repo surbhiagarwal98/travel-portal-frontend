@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="container1">    
+        <h1>Welcome to Nagarro Travel Portal</h1>
+        <a href="users/authenticate" style="color: whitesmoke;">Logout</a>
+    </div>
+    <br>
+        <h2>Get best experiences of<br> Work & Travel</h2>
+    <br>
+        <form>
+            <input type="submit" value="SUBMIT TICKET" name="home-ticket" class="btn" (click)="submitTicket()" >
+            <input type="submit" value="VIEW TICKETS" name="home-viewticket" class="btn" (click)="viewTickets()" >
+        </form>
+        
+        <div class="container4" *ngFor="let ticket of tickets" style="overflow:auto">
+            <table>
+                <tr class = "header-row">
+                    <td>Action</td>
+                    <td>TicketId</td>
+                    <td>RequestType</td>
+                    <td>priority</td>
+                    <td>locationTo</td>
+                    <td>locationFrom</td>
+                    <td>startDate</td>
+                    <td>endDate</td>
+                    <td>passportNo</td>
+                    <td>projectName</td>
+                    <td>expenseBearer</td>
+                    <td>travelApprover</td>
+                    <td>expectedTravelDuration</td>
+                    <td>maxAllowedAmount</td>
+                    <td>description</td>
+                    <td>ticketStatus</td>
+                </tr>
+                <tr>
+                    <td><button type="submit" style="cursor:pointer;background-color: crimson; color: white; padding: 2px;"  (click)="editTicket(ticket)">Edit</button></td>
+                    <td>{{ticket.ticketId}}</td>
+                    <td>{{ticket.requestType}}</td>
+                    <td>{{ticket.priority}}</td>
+                    <td>{{ticket.locationTo}}</td>
+                    <td>{{ticket.locationFrom}}</td>
+                    <td>{{ticket.startDate}}</td>
+                    <td>{{ticket.endDate}}</td>
+                    <td>{{ticket.passportNo}}</td>
+                    <td>{{ticket.projectName}}</td>
+                    <td>{{ticket.expenseBearer}}</td>
+                    <td>{{ticket.travelApprover}}</td>
+                    <td>{{ticket.expectedTravelDuration}}</td>
+                    <td>{{ticket.maxAllowedAmount}}</td>
+                    <td>{{ticket.description}}</td>
+                    <td>{{ticket.ticketStatus}}</td>
+                </tr>
+            </table>
+    </div>
+</body>
+</html>
